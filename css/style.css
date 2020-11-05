@@ -50,36 +50,7 @@ h1 {
   font-size: 2.5rem;
 }
 /* ----------------------------------------------/メイン----------------------------------------------- */
-/* --------------------------------------サイドメニュー------------------------------------ */
-#menu {
-  box-sizing: content-box;
-  top: 0px;
-  height: 100%;
-  width: 36rem;
-  position: fixed;
-  background-color: rgba(129, 129, 129, 0.6);
-  text-align: center;
-  display: table;
-}
-ul {
-  list-style: none;
-}
-.menulist {
-  display: table-cell;
-  vertical-align: middle;
-}
-.li1 {
-  font-size: 4rem;
-}
-.li2 , .li3 , .li4 {
-  margin-top: 3rem;
-  font-size: 3.5rem;
-}
-a {
-  text-decoration: none;
-  color: aliceblue;
-}
-/* --------------------------------------/サイドメニュー------------------------------------ */
+
 /* --------------------------------------メイン２------------------------------------ */
 #main2 {
   color: aliceblue;
@@ -216,23 +187,34 @@ h5 {
 }
 /* --------------------------------------/全ページ共通指定------------------------------------ */
 
-/* --------------------------------------ページ遷移ボタン------------------------------------ */
-.pagination {
+/* --------------------------------------サイドメニュー(ページ遷移)------------------------------------ */
+#pagination {
+  box-sizing: content-box;
+  top: 0px;
+  height: 100%;
+  width: 36rem;
   position: fixed;
-  top: 50%;
-  right: 32px;
-  transform: translateY(-50%);
+  background-color: rgba(129, 129, 129, 0.6);
+  text-align: center;
+  display: table;
 }
-.pagination a {
-  display: block;
-  width: 12px;
-  height: 12px;
-  margin: 24px 0;
-  border-radius: 50%;
-  background-color: #fcfcfc;
+
+.li1 {
+  font-size: 4rem;
+}
+
+.li2 , .li3 , .li4 {
+  margin-top: 3rem;
+  font-size: 3.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
   transition: transform 0.2s;
 }
+
 .pagination a.active {
   transform: scale(1.8);
 }
-/* --------------------------------------/ページ遷移ボタン------------------------------------ */
+/* --------------------------------------/サイドメニュー(ページ遷移)------------------------------------ */
