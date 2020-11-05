@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-image: url(../images/backimgc.png);
+}
+/* ----------------------------------------------メイン----------------------------------------------- */
+#main1{
+  color: aliceblue;
+  margin-left: 36rem;
+  padding: 2rem 4rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+ margin-top: 28vh;
+}
+
+h1 {
+  font-size: 8rem;
+}
+
+.name {
+  font-size: 4rem;
+}
+
+.aboutjob {
+  margin-top: 5vw;
+  font-size: 3rem;
+  position: relative;
+  left: -20vw;
+}
+
+.job {
+  margin-top: 2vh;
+  font-size: 3.7rem;
+}
+
+.joben {
+  margin-top: 2vh;
+  font-size: 2.5rem;
+}
+/* ----------------------------------------------/メイン----------------------------------------------- */
+/* --------------------------------------サイドメニュー------------------------------------ */
+#menu {
+  box-sizing: content-box;
+  top: 0px;
+  height: 100%;
+  width: 36rem;
+  position: fixed;
+  background-color: rgba(129, 129, 129, 0.6);
+  text-align: center;
+  display: table;
+}
+ul {
+  list-style: none;
+}
+.menulist {
+  display: table-cell;
+  vertical-align: middle;
+}
+.li1 {
+  font-size: 4rem;
+}
+.li2 , .li3 , .li4 {
+  margin-top: 3rem;
+  font-size: 3.5rem;
+}
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+/* --------------------------------------/サイドメニュー------------------------------------ */
+/* --------------------------------------メイン２------------------------------------ */
+#main2 {
+  color: aliceblue;
+  margin-left: 36rem;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 8%;
+}
+
+h2 {
+  margin-bottom: 3%;
+  font-size: 5rem;
+}
+
+h3 {
+  margin-top: 8%;
+  margin-bottom: 3%;
+  font-size: 5rem;
+}
+
+.skill {
+  font-size: 4.5rem;
+}
+
+.months {
+  font-size: 4.5rem;
+}
+
+.skillname {
+  text-align: center;
+}
+
+.experience {
+  margin-left: 20%;
+}
+
+.experience2 {
+  margin-left: 13%;
+}
+.skillbox {
+  display: flex;
+  justify-content: flex-end;
+}
+/* --------------------------------------/メイン２------------------------------------ */
+/* --------------------------------------メイン３------------------------------------ */
+#main3 {
+  color: aliceblue;
+  margin-left: 36rem;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 8%;
+}
+
+h4 {
+  font-size: 5rem;
+  margin-bottom: 3%;
+}
+
+.listname1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.url1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.sample1 {
+  margin: 0 auto;
+  display: block;
+}
+/* --------------------------------------/メイン３------------------------------------ */
+/* --------------------------------------メイン４------------------------------------ */
+#main4 {
+  color: aliceblue;
+  margin-left: 36rem;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 8%;
+}
+
+h5 {
+  margin-top: 8%;
+  margin-bottom: 3%;
+  font-size: 5rem;
+}
+
+.contact {
+  margin-top: 20%;
+  display: flex;
+}
+
+.contact-content {
+  margin-left: 8vw;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.contact-content p {
+  margin-top: 3vh;
+}
+
+.address {
+  margin-left: 10vw;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.address p {
+  margin-top: 3vh;
+}
+/* --------------------------------------/メイン４------------------------------------ */
+
+/* --------------------------------------スクロール------------------------------------ */
+.fullPageScroll {
+  width: 100%;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* --------------------------------------/スクロール------------------------------------ */
+
+/* --------------------------------------全ページ共通指定------------------------------------ */
+.section {
+  width: 100%;
+  height: 100vh;
+  padding: 0 5%;
+  scroll-snap-align: start;
+}
+/* --------------------------------------/全ページ共通指定------------------------------------ */
+
+/* --------------------------------------ページ遷移ボタン------------------------------------ */
+.pagination {
+  position: fixed;
+  top: 50%;
+  right: 32px;
+  transform: translateY(-50%);
+}
+.pagination a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 24px 0;
+  border-radius: 50%;
+  background-color: #fcfcfc;
+  transition: transform 0.2s;
+}
+.pagination a.active {
+  transform: scale(1.8);
+}
+/* --------------------------------------/ページ遷移ボタン------------------------------------ */

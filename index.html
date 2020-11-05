@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>フルページスクロール</title>
+    <script src="smoothscroll.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="fullPageScroll">
+      <!-- ----------------------------------------------メイン１----------------------------------------------- -->
+      <section id="section1" class="section section1">
+        <div id="main1">
+          <div class="title">
+            <h1 id="jafont">村尾俊介</h1>
+            <p class="name">MURAO SHUNSUKE</p>
+          </div>
+          <p class="aboutjob">My profession is</p>
+          <p class="job" id="jafont">ウェブデザイン・コーディング</p>
+          <p class="joben">WEB DESIGN & CODING</p>
+        </div>
+        <!-- ----------------------------------------------/メイン１----------------------------------------------- -->
+        <!-- ----------------------------------------------サイドメニュー----------------------------------------------- -->
+        <asid id="menu">
+          <ul class="menulist">
+            <li class="li1"><a href="#">HOME</a></li>
+            <li class="li2"><a href="#">スキル</a></li>
+            <li class="li3"><a href="#">実績</a></li>
+            <li class="li4"><a href="#">連絡先</a></li>
+          </ul>
+        </asid>
+      </section>
+      <!-- ----------------------------------------------/サイドメニュー----------------------------------------------- -->
+      <!-- ----------------------------------------------メイン２----------------------------------------------- -->
+      <section id="section2" class="section section2">
+        <div id="main2">
+          <h2>SKILLS</h2>
+          <div class="skillbox">
+            <div class="skillname">
+              <p class="skill">HTML & CSS</p>
+              <p class="skill">JavaScript</p>
+            </div>
+            <div class="experience">
+              <p class="months">９ヶ月</p>
+              <p class="months">２ヶ月</p>
+            </div>
+          </div>
+          <h3>TOOLS</h3>
+          <div class="skillbox">
+            <div class="skillname">
+              <p class="skill">VisualStudioCode</p>
+              <p class="skill">XD</p>
+              <p class="skill">Sketch</p>
+              <p class="skill">Photoshop</p>
+            </div>
+            <div class="experience2">
+              <p class="months">９ヶ月</p>
+              <p class="months">６ヶ月</p>
+              <p class="months">３ヶ月</p>
+              <p class="months">１ヶ月</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ----------------------------------------------/メイン２----------------------------------------------- -->
+      <!-- ----------------------------------------------/メイン３----------------------------------------------- -->
+      <section id="section3" class="section section3">
+        <div id="main3">
+          <h4>PERFORMANCE</h4>
+          <div class="list1">
+            <p class="listname1">・(有)西沢表具店</p>
+            <p class="url1">URL : <a href="https://www.nishizawahyougu.jp">https://www.nishizawahyougu.jp</a></p>
+            <iframe class="sample1" src="https://www.nishizawahyougu.jp" target="_blank" frameborder="0" name="nishizawahp" width="550" height="300"></iframe>
+          </div>
+        </div>
+      </section>
+      <!-- ----------------------------------------------/メイン３----------------------------------------------- -->
+      <!-- ----------------------------------------------メイン４----------------------------------------------- -->
+      <section id="section4" class="section section4">
+        <div id="main4">
+          <h5>CONTACT</h5>
+          <div class="contact">
+            <div class="contact-content">
+              <p>Mail</p>
+              <p>Twitter</p>
+            </div>
+            <div class="address">
+              <p>shun02051@gmail.com</p>
+              <p> <a href="https://twitter.com/s_nnnnxxnx">@s_nnnnxxnx</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ----------------------------------------------/メイン４----------------------------------------------- -->
+    </div>
+    <nav id="pagination" class="pagination">
+      <a id="pagination1" href="#section1"></a>
+      <a id="pagination2" href="#section2"></a>
+      <a id="pagination3" href="#section3"></a>
+      <a id="pagination4" href="#section4"></a>
+    </nav>
+    <script>
+      // スムーススクロール
+      const paginations = document.querySelectorAll(".pagination a");
+      paginations.forEach(pagination => {
+        pagination.addEventListener("click", e => {
+          e.preventDefault();
+          const targetId = e.target.hash;
+          const target = document.querySelector(targetId);
+          target.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+
+      // Intersection Observer
+      const sections = document.querySelectorAll(".section");
+      const observerRoot = document.querySelector(".fullPageScroll");
+      const options = {
+        root: observerRoot,
+        rootMargin: "-50% 0px",
+        threshold: 0
+      };
+      const observer = new IntersectionObserver(doWhenIntersect, options);
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+
+      /**
+       * 交差したときに呼び出す関数
+       * @param entries - IntersectionObserverEntry IntersectionObserverが交差したときに渡されるオブジェクト
+       */
+      function doWhenIntersect(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            activatePagination(entry.target);
+          }
+        });
+      }
+
+      /**
+       * ページネーションの大きさを変える関数
+       * @param element - HTMLElement 現在表示中のスライドのHTML要素を引数に取る
+       */
+      function activatePagination(element) {
+        const currentActiveIndex = document.querySelector(
+          "#pagination .active"
+        );
+        if (currentActiveIndex !== null) {
+          currentActiveIndex.classList.remove("active");
+        }
+        const newActiveIndex = document.querySelector(
+          `a[href='#${element.id}']`
+        );
+        newActiveIndex.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
