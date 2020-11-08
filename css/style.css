@@ -10,6 +10,7 @@ html {
 
 body {
   background-image: url(../images/backimgc.png);
+  background-size: cover;
   font-family: "Copperplate" , "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif,"ヒラギノ角ゴシック",Hiragino Sans;
   font-weight: 500;
   line-height: 1;
@@ -71,8 +72,9 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 3%;
   font-size: 5rem;
+  margin-top: 8%;
+  margin-bottom: 3%;
 }
 
 h3 {
@@ -122,6 +124,7 @@ h3 {
 
 h4 {
   font-size: 5rem;
+  margin-top: 8%;
   margin-bottom: 3%;
 }
 .list1 {
@@ -274,5 +277,9 @@ h5 {
 }
 
 @media only screen and (max-width:1024px) {
-  
+
+}
+
+@media only screen and (max-width:1024px) {
+
 }
