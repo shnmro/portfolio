@@ -359,5 +359,23 @@ h5 {
 /* --------------------------------------/タブレット表示------------------------------------ */
 
 @media only screen and (max-width:767px) {
+  html {
+    font-size: 3px;
+  }
 
+  #pagination {
+    width: 28rem;
+  }
+
+  .pagination a.active {
+    transform: scale(1.5);
+  }
+
+  #main1 , #main2 , #main3 , #main4 {
+    margin-left: 28rem;
+  }
+
+  .sample1 {
+    width: 250px;
+  }
 }
