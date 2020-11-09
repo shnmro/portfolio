@@ -358,6 +358,6 @@ h5 {
 }
 /* --------------------------------------/タブレット表示------------------------------------ */
 
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width:767px) {
 
 }
