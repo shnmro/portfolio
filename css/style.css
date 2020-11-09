@@ -210,7 +210,27 @@ h5 {
   color: aliceblue;
 }
 
+.contact-content {
+  margin-left: 1vw;
+  font-size: 6rem;
+}
 
+.address {
+  margin-left: 1vw;
+  font-size: 6rem;
+}
+
+.contact-content p {
+  margin-top: 5vh;
+}
+
+.address p {
+  margin-top: 5vh;
+}
+
+.address a {
+  margin-top: 5vh;
+}
 /* --------------------------------------/メイン４pc------------------------------------ */
 
 /* --------------------------------------スクロール------------------------------------ */
@@ -270,19 +290,71 @@ h5 {
   margin-top: 7vh;
 }
 /* --------------------------------------/サイドメニュー(ページ遷移)pc------------------------------------ */
-@media only screen and (max-width:1280px) {
+@media screen and (max-width:1280px) {
   html {
     font-size: 8px;
   }
 }
 /* --------------------------------------タブレット表示------------------------------------ */
 @media only screen and (max-width:1024px) {
+  html {
+    font-size: 6px;
+  }
+
+  h1 {
+    font-size: 10rem;
+  }
+
+  .name {
+    font-size: 5.5rem;
+  }
+
+  .aboutjob {
+    margin-top: 14vw;
+    font-size: 5rem;
+    left: -15vw;
+  }
+
+  .job {
+    margin-top: 4.5vh;
+    font-size: 5.3rem;
+  }
+
+  .joben {
+    margin-top: 2vh;
+    font-size: 4.4rem;
+  }
+
+  .listname1 {
+    font-size: 6rem;
+    margin-bottom: 7rem;
+  }
+
+  .url1 {
+    font-size: 4rem;
+    margin-bottom: 8rem;
+  }
+
+  .url1 a {
+    font-size: 5.5rem;
+  }
+
+  .sample1 {
+    width: 400px;
+  }
+  /* ------------------サイドバー余白消し------------------------------------ */
   .section {
     padding: 0;
   }
-  .menu a {
-    font-size: 4.2rem;
+  /* ------------------/サイドバー余白消し------------------------------------ */
+  #pagination {
+    
   }
+  /* ------------------サイドバー文字大きく------------------------------------ */
+  .menu a {
+    font-size: 5.2rem;
+  }
+  /* ------------------サイドバー文字大きく------------------------------------ */
 }
 /* --------------------------------------/タブレット表示------------------------------------ */
 
