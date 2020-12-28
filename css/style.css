@@ -20,6 +20,10 @@ a {
   text-decoration: none;
   color: aliceblue;
 }
+
+p {
+  color: aliceblue;
+}
 /* ----------------------------------------------メインpc----------------------------------------------- */
 #main1{
   color: aliceblue;
@@ -253,6 +257,13 @@ h5 {
 /* --------------------------------------/全ページ共通指定------------------------------------ */
 
 /* --------------------------------------サイドメニュー(ページ遷移)pc------------------------------------ */
+.menutitle {
+  position: relative;
+  top: -20rem;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
 #pagination {
   box-sizing: border-box;
   top: 0px;
@@ -267,6 +278,7 @@ h5 {
   margin: auto;
   display: grid;
   place-items: center;
+  text-align: center;
 }
 
 .menu a {
