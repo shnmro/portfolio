@@ -27,47 +27,69 @@ p {
 
 #allura {
   font-family: 'Allura', cursive;
-  font-size: 2.5rem;
+  font-weight: lighter;
+  font-size: 2.3rem;
 }
-/* ----------------------------------------------メインpc----------------------------------------------- */
+/* ----------------------------------------------メイン1pc----------------------------------------------- */
 #main1{
   color: aliceblue;
   margin-left: 36rem;
-  padding: 2rem 4rem;
+  padding: 2rem 20rem;
   display: flex;
   flex-direction: column;
 }
 
 .title {
-  margin-top: 32vh;
+  margin-top: 22vh;
 }
 
-h1 {
+.janame {
   font-size: 8rem;
 }
 
 .name {
-  margin-top: 2vh;
+  margin-top: 1rem;
   font-size: 4rem;
 }
 
-.aboutjob {
-  margin-top: 7.5vw;
-  font-size: 3rem;
+.myself-date {
+  margin-top: 15%;
+  font-size: 3.5rem;
+}
+
+.born {
+  margin-top: 6%;
+}
+
+.age1 , .born1 {
+  margin-top: 1%;
+}
+/* メイン１pc自己紹介分 */
+.self-introduction {
+  width: 480px;
+  height: 380px;
+  background-color: rgba(129, 129, 129, 0.4);
   position: relative;
-  left: -20vw;
+  left: 12vw;
+  top: -31vh;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
 }
+.title:hover ~ .self-introduction {
+  opacity: 1;
+}
+.introduction {
+  display: inline-block;
+  margin: 25px;
+  width: 400px;
+  height: 300px;
+  font-size: 2.2rem;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif,"ヒラギノ角ゴシック",Hiragino Sans;
+  line-height: 1.3em;
+}
+/* /メイン１pc自己紹介分 */
 
-.job {
-  margin-top: 3.5vh;
-  font-size: 3.7rem;
-}
-
-.joben {
-  margin-top: 3.5vh;
-  font-size: 2.5rem;
-}
-/* ----------------------------------------------/メインpc----------------------------------------------- */
+/* ----------------------------------------------/メイン1pc----------------------------------------------- */
 
 /* --------------------------------------メイン２pc------------------------------------ */
 #main2 {
@@ -255,7 +277,6 @@ h5 {
 .section {
   width: 100%;
   height: 100vh;
-  padding: 0 5%;
   scroll-snap-align: start;
 }
 /* --------------------------------------/全ページ共通指定------------------------------------ */
@@ -263,7 +284,7 @@ h5 {
 /* --------------------------------------サイドメニュー(ページ遷移)pc------------------------------------ */
 .menutitle {
   position: relative;
-  top: -20rem;
+  top: -10rem;
   text-align: center;
 }
 
@@ -278,7 +299,7 @@ h5 {
 }
 
 .menu {
-  margin: auto;
+  margin: 15vh auto;
   display: grid;
   place-items: center;
   text-align: center;
@@ -307,7 +328,7 @@ h5 {
 
 .myjob {
   position: relative;
-  bottom: -20rem;
+  bottom: -10rem;
 }
 /* --------------------------------------/サイドメニュー(ページ遷移)pc------------------------------------ */
 @media screen and (max-width:1280px) {
@@ -315,7 +336,7 @@ h5 {
     font-size: 8px;
   }
 }
-/* --------------------------------------タブレット表示------------------------------------ */
+/* --------------------------------------タブレット表示 ~1024px------------------------------------ */
 @media only screen and (max-width:1024px) {
   html {
     font-size: 6px;
@@ -362,6 +383,16 @@ h5 {
   .sample1 {
     width: 400px;
   }
+
+  .self-introduction {
+    top: -20rem;
+    opacity: 1;
+  }
+
+  .introduction {
+    font-size: 2.8rem;
+  }
+
   /* ------------------サイドバー余白消し------------------------------------ */
   .section {
     padding: 0;
@@ -394,5 +425,8 @@ h5 {
 
   .sample1 {
     width: 250px;
+  }
+  .self-introduction {
+    position: absolute;
   }
 }
