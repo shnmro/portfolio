@@ -81,8 +81,6 @@ p {
 .introduction {
   display: inline-block;
   margin: 25px;
-  width: 400px;
-  height: 300px;
   font-size: 2.2rem;
   font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN","HG明朝E","ＭＳ Ｐ明朝","ＭＳ 明朝",serif,"ヒラギノ角ゴシック",Hiragino Sans;
   line-height: 1.3em;
@@ -385,6 +383,8 @@ h5 {
   }
 
   .self-introduction {
+    width: 320px;
+    width: 320px;
     top: -20rem;
     opacity: 1;
   }
@@ -406,27 +406,36 @@ h5 {
 }
 /* --------------------------------------/タブレット表示------------------------------------ */
 
+/* --------------------------------------スマホ表示------------------------------------ */
 @media only screen and (max-width:767px) {
   html {
     font-size: 3px;
   }
-
+  
   #pagination {
     width: 28rem;
   }
-
+  
   .pagination a.active {
     transform: scale(1.5);
   }
-
+  
   #main1 , #main2 , #main3 , #main4 {
     margin-left: 28rem;
   }
-
+  
   .sample1 {
     width: 250px;
   }
   .self-introduction {
-    position: absolute;
+    margin-top: 15px;
+    position: static;
+    width: 170px;
+    height: 250px;
   }
+  .introduction {
+    margin: 10px;
+    line-height: 1.7em;
+  }
+  /* --------------------------------------/スマホ表示------------------------------------ */
 }
